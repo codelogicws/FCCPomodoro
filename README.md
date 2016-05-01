@@ -20,6 +20,9 @@ You will first need to install
 node, npm
 
 run the following commands:
+
 npm install
+
 typings install (You might have to install typings using npm for this to work)
+
 tsd install (You might have to install tsd using npm for this to work)
