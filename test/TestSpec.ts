@@ -1,31 +1,15 @@
 /// <reference path="../typings/browser/ambient/mocha/index.d.ts" />
 /// <reference path="../typings/browser/definitions/chai/index.d.ts" />
-
-/**
- * Module dependencies.
- */
 import chai = require('chai');
-
-/**
- * Globals
- */
-
+import {Test} from "../src/Test";
 var expect = chai.expect;
 
-/**
- * Unit tests
- */
-describe('User Model Unit Tests:', () => {
 
-    describe('2 + 4', () => {
-        it('should be 6', (done) => {
-            expect(2+4).to.equals(6);
-            done();
-        });
-
-        it('should not be 7', (done) => {
-            expect(2+4).to.not.equals(7);
-            done();
-        });
-    });
+describe('One Example Test', () => {
+  let test: Test = new Test();
+  it('should print hello world', (done) => {
+    expect(test.test()).to.equals('Hello World');
+      expect(2+4).to.equals(6);
+      done();
+  });
 });
