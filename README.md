@@ -13,7 +13,7 @@ JQuery
 lodash
 
 Extras:
-Live-Survey = For automating compiling and refreshing of the browser every-time something is saved
+Live-Server = For automating compiling and refreshing of the browser every-time something is saved
 
 #How To Install
 You will first need to install
