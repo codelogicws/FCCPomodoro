@@ -1,6 +1,30 @@
-<html>
-<script src='../built/src/person.js'></script>
-  <body>
-    <h1>Type Script Test</h1>
-  </body>
-</html>
+<!--
+User Story: I can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed.
+
+User Story: I can reset the clock for my next pomodoro.
+
+User Story: I can customize the length of each pomodoro.
+-->
+<head>
+  <script src='../node_modules/jquery/dist/jquery.min.js'></script>
+  <script src='../built/src/main.js'></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Pomodoructivity</h1>
+<div id='pomodorotime'></div>
+  <div id="counter">
+
+    <div id="time">
+    </div>
+    <button id="increaseMin" onclick="add5()">+</button>
+      <button id="decreseMin" onclick="sub5()">-</button>
+
+
+    </div>
+      <button id="start" onclick="startTimer()">start</button>
+        <button id="stop" onclick="stopTimer()">pause</button>
+        <button id="stop" onclick="resetTimer()">reset</button>
+  </div>
+
+</body>
