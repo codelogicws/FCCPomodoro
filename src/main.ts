@@ -2,8 +2,7 @@
 
 let startTime:number;
 let timeAlreadyUsed:number = 0;
-let alarmGoingOff:boolean = false;
-var time = 1300;
+let time:number = 1500;
 
 function timer() {
   startTime = Date.now();
@@ -18,7 +17,6 @@ function postTime(div:string){
     var countInMin = Math.floor(secondsLeft / 60);
     var countInSec = Math.floor(secondsLeft % 60);
     if(countInMin <= 0 && countInSec <= 0){
-      alarmGoingOff = true;
       $(div).text("-- Done --");
     }else{
       $(div).text(countInMin + ":" + doubleDigitFormat(countInSec));
@@ -42,7 +40,6 @@ function startTimer() {
 
 function resetTimer() {
   stopTimer();
-  alarmGoingOff = false;
   startTime = Date.now()
   timeAlreadyUsed = 0;
   postTime('#stoptime');
@@ -62,5 +59,8 @@ function sub5() {
   refreshPomodoroTime();
 }
 
-refreshPomodoroTime();
-timer();
+$(()=>{
+  refreshPomodoroTime();
+  timer();
+  resetTimer();
+})
