@@ -2,7 +2,9 @@
 
 let startTime:number;
 let timeAlreadyUsed:number = 0;
+let alarmWentOff:boolean = false;
 let time:number = 1500;
+let timeIncrements:number = 300;
 
 function timer() {
   startTime = Date.now();
@@ -17,10 +19,20 @@ function postTime(div:string){
     var countInMin = Math.floor(secondsLeft / 60);
     var countInSec = Math.floor(secondsLeft % 60);
     if(countInMin <= 0 && countInSec <= 0){
+      alarmActive();
       $(div).text("Done");
     }else{
       $(div).text(countInMin + ":" + doubleDigitFormat(countInSec));
     }
+}
+
+function alarmActive(){
+  if(!alarmWentOff){
+    alarmWentOff = true;
+    var audio = new Audio('http://shneek.com/codepen/alarm.mp3');
+    audio.play();
+    resetTimer();
+  }
 }
 
 function postTimeActive(){
@@ -50,7 +62,7 @@ function resetTimer() {
 }
 
 function add() {
-  time += 300;
+  time += timeIncrements;
   refreshPomodoroTime();
   postTimeActive();
 }
@@ -60,9 +72,12 @@ function refreshPomodoroTime() {
 }
 
 function sub() {
-  time -= 300;
+  if(time > 0){
+    time -= timeIncrements
+  }
   refreshPomodoroTime();
   postTimeActive();
+  resetTimer();
 }
 
 $(()=>{
