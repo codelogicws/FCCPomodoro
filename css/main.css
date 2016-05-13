@@ -34,28 +34,40 @@ body{
 
 .timedisplay{
   color: white;
-  font-size: 22vw;
-  border: solid grey 1px;
+  /*
+  */
+  font-size: 19vw;
   text-align: center;
-  padding: 3vw;
+  border: solid grey 1px;
   border-radius: 3vw;
   text-shadow: 2px 2px 4px #000000;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#pomodorotime{
-  color: white;
-  font-size: 2vw;
-  text-shadow: 2px 2px 4px #000000;
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.center{
+  text-align: center;
+}
+
+#title{
+  color: #aaa;
+  font-size: 7vw;
 }
 
 .controls{
   text-shadow: 2px 2px 4px #000000;
-  font-size: 3vw;
+  font-size: 10vw;
 }
 
 .smallcontrols{
   color: white;
-  font-size: 2vw;
+  font-size: 5vw;
   text-shadow: 2px 2px 4px #000000;
 }

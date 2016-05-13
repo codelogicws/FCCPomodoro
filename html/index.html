@@ -14,21 +14,30 @@ User Story: I can customize the length of each pomodoro.
 </head>
 <body>
   <div class="container">
-    <div id="app">
-      <h1>Pomodoro</h1>
-        <span id="increaseMin" class="glyphicon glyphicon-plus smallcontrols" onclick="add()"></span>
-        <span id='pomodorotime'></span>
-        <span id="decreseMin" class="glyphicon glyphicon-minus smallcontrols" onclick="sub()"></span>
-    <div id="counter"></div>
+      <h1 id='title'>Pomodoro</h1>
 
-      <span class='col-xs-12 clock'>
-        <span id="start" class="glyphicon glyphicon-play controls" onclick="startTimer()" onMouseOver="this.style.cursor='pointer'"></span>
-        <span id="pause" class="glyphicon glyphicon-pause controls" onclick="stopTimer()" onMouseOver="this.style.cursor='pointer'"></span>
-        <span id="stop" class="glyphicon glyphicon-stop controls" onclick="resetTimer()" onMouseOver="this.style.cursor='pointer'"></span>
-      <span id="time" class='timedisplay'></span>
-      </span>
+      <div class='row'>
+        <div class='col-xs-1 col-md-2'></div>
+        <div class='col-xs-10 col-md-8'>
+          <a id="start" class="glyphicon glyphicon-play controls" onclick="startTimer()" onMouseOver="this.style.cursor='pointer'"></a>
+          <a id="pause" class="glyphicon glyphicon-pause controls" onclick="stopTimer()" onMouseOver="this.style.cursor='pointer'"></a>
+          <a id="stop" class="glyphicon glyphicon-stop controls" onclick="resetTimer()" onMouseOver="this.style.cursor='pointer'"></a>
+        </div>
+        <div class='col-xs-1 col-md-2'></div>
+      </div>
 
-    </div>
+  </div>
+<div class='row'>
+  <div class='col-xs-1 col-md-2'></div>
+  <div id="time" class='col-xs-10 col-md-8 timedisplay'></div>
+  <div class='col-xs-1 col-md-2'></div>
+</div>
+
+
+  <div class="center">
+    <a id="increaseMin" class="glyphicon glyphicon-plus smallcontrols" onclick="add()"></a>
+    <span id='pomodorotime' class="smallcontrols"></span>
+    <a id="decreseMin" class="glyphicon glyphicon-minus smallcontrols" onclick="sub()"></a>
   </div>
 
 </body>
