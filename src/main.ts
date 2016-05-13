@@ -7,7 +7,7 @@ let time:number = 1500;
 function timer() {
   startTime = Date.now();
   window.setInterval(function() {
-    postTime('#time');
+    postTimeActive();
   }, 1000);
 
 }
@@ -17,10 +17,14 @@ function postTime(div:string){
     var countInMin = Math.floor(secondsLeft / 60);
     var countInSec = Math.floor(secondsLeft % 60);
     if(countInMin <= 0 && countInSec <= 0){
-      $(div).text("-- Done --");
+      $(div).text("Done");
     }else{
       $(div).text(countInMin + ":" + doubleDigitFormat(countInSec));
     }
+}
+
+function postTimeActive(){
+  postTime('#time');
 }
 
 function doubleDigitFormat(x:number):string{
@@ -45,18 +49,20 @@ function resetTimer() {
   postTime('#stoptime');
 }
 
-function add5() {
+function add() {
   time += 300;
   refreshPomodoroTime();
+  postTimeActive();
 }
 
 function refreshPomodoroTime() {
-  $('#pomodorotime').html(time / 60  + " minutes");
+  $('#pomodorotime').html('&nbsp;&nbsp;&nbsp;' + time / 60  + " Minutes" + '&nbsp;&nbsp;&nbsp;');
 }
 
-function sub5() {
+function sub() {
   time -= 300;
   refreshPomodoroTime();
+  postTimeActive();
 }
 
 $(()=>{

@@ -1,0 +1,61 @@
+body{
+  background: url('http://shneek.com/codepen/symphony.png');
+}
+
+#start{
+  color: #9b9;
+}
+
+#stop{
+  color: #b99;
+}
+
+#pause{
+  color: #bb9;
+}
+
+#time{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#99bb99+0,c7d8c7+53,c7d8c7+72,c7d8c7+72,99bb99+100 */
+  background: rgb(153,187,153); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(153,187,153,1) 0%, rgba(199,216,199,1) 53%, rgba(199,216,199,1) 72%, rgba(199,216,199,1) 72%, rgba(153,187,153,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(153,187,153,1) 0%,rgba(199,216,199,1) 53%,rgba(199,216,199,1) 72%,rgba(199,216,199,1) 72%,rgba(153,187,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(153,187,153,1) 0%,rgba(199,216,199,1) 53%,rgba(199,216,199,1) 72%,rgba(199,216,199,1) 72%,rgba(153,187,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99bb99', endColorstr='#99bb99',GradientType=0 ); /* IE6-9 */
+}
+
+#stoptime{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bb9999+0,e8bebe+53,bb9999+100 */
+  background: rgb(187,153,153); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(187,153,153,1) 0%, rgba(232,190,190,1) 53%, rgba(187,153,153,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(187,153,153,1) 0%,rgba(232,190,190,1) 53%,rgba(187,153,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(187,153,153,1) 0%,rgba(232,190,190,1) 53%,rgba(187,153,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bb9999', endColorstr='#bb9999',GradientType=0 ); /* IE6-9 */
+}
+
+.timedisplay{
+  color: white;
+  font-size: 22vw;
+  border: solid grey 1px;
+  text-align: center;
+  padding: 3vw;
+  border-radius: 3vw;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#pomodorotime{
+  color: white;
+  font-size: 2vw;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.controls{
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 3vw;
+}
+
+.smallcontrols{
+  color: white;
+  font-size: 2vw;
+  text-shadow: 2px 2px 4px #000000;
+}

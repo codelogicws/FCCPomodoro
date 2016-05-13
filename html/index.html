@@ -9,23 +9,26 @@ User Story: I can customize the length of each pomodoro.
   <title>Pomodoro</title>
   <script src='../node_modules/jquery/dist/jquery.min.js'></script>
   <script src='../built/src/main.js'></script>
+  <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
-  <div id="app">
-    <h1>Pomodoro</h1>
-<div id='pomodorotime'></div>
-  <div id="counter">
+  <div class="container">
+    <div id="app">
+      <h1>Pomodoro</h1>
+        <span id="increaseMin" class="glyphicon glyphicon-plus smallcontrols" onclick="add()"></span>
+        <span id='pomodorotime'></span>
+        <span id="decreseMin" class="glyphicon glyphicon-minus smallcontrols" onclick="sub()"></span>
+    <div id="counter"></div>
 
-    <div id="time">
+      <span class='col-xs-12 clock'>
+        <span id="start" class="glyphicon glyphicon-play controls" onclick="startTimer()" onMouseOver="this.style.cursor='pointer'"></span>
+        <span id="pause" class="glyphicon glyphicon-pause controls" onclick="stopTimer()" onMouseOver="this.style.cursor='pointer'"></span>
+        <span id="stop" class="glyphicon glyphicon-stop controls" onclick="resetTimer()" onMouseOver="this.style.cursor='pointer'"></span>
+      <span id="time" class='timedisplay'></span>
+      </span>
+
     </div>
-    <button id="increaseMin" onclick="add5()">+</button>
-      <button id="decreseMin" onclick="sub5()">-</button>
-
-
-    </div>
-      <button id="start" onclick="startTimer()">start</button>
-        <button id="stop" onclick="stopTimer()">pause</button>
-        <button id="stop" onclick="resetTimer()">reset</button>
   </div>
 
 </body>
